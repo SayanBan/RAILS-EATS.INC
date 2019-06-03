@@ -1,0 +1,16 @@
+<div class="recipe-edit">
+  <div class="container">
+    <div class="img_container">
+      <%= image_tag @recipe.image %>
+    </div>
+
+    <%= form_for(@recipe) do |f| %>
+      <%= f.text_field :name %>
+      <%= f.text_area :ingredients %>
+      <%= f.text_area :instructions %>
+      <%= f.submit "Update", :class => "form-btn" %>
+    <% end %> 
+    
+  </div>
+</div> 
+
