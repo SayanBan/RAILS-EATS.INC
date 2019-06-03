@@ -1,0 +1,12 @@
+<div class="cuisines">
+  <div class="container">
+    <% @cuisines.each do |cuisine|%> 
+      <div class="cuisine">
+        <h2><%= cuisine.region %></h2> 
+        <img class="arrow" src="http://s3.amazonaws.com/codecademy-content/courses/rails-auth/img/arrow.svg" width="80" height="40">
+        <p><%= link_to "View Recipes", cuisine_path(cuisine) %></p>
+        <%= image_tag cuisine.image %>
+      </div> 
+    <% end %>
+  </div>
+</div>
