@@ -1,0 +1,358 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+  background-color: #DAD8D2;
+}
+
+.header {
+  background-color: #000;
+  height: 300px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.logo {
+  background: url("http://s3.amazonaws.com/codecademy-content/courses/rails-auth/img/eatsinc-logo.svg");
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  top: 140px;
+  width: 220px;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  color: #fff;
+  display: block;
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  width: 50%;
+}
+
+.nav ul li a {
+  color: #fff;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+  width: 100%;
+}
+
+.nav ul li a:hover {
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+}
+
+/*
+  CUISINES & RECIPES
+*/
+
+div.cuisine, .recipe {
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+h1.cuisine {
+  background-color: #fff;
+  height: 80px;
+  font-weight: normal;
+  line-height: 80px;
+  text-align: center;
+  width: 100%;
+}
+
+.cuisine img, .recipe img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cuisine h2, .recipe h2 {
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  display: block;
+  font-size: 22px;
+  font-weight: normal;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 0;
+  width: calc(100% - 60px);
+  white-space: nowrap;
+}
+
+.cuisine a {
+  background-color: #fff;
+  bottom: 0;
+  color: #000;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+  width: 50%%;
+}
+
+.cuisine a:hover, .recipes .recipe-link a:hover, .recipes .recipe-edit a:hover, .recipe-show .recipe-edit a:hover, .recipe-show .recipe-delete a:hover, .recipe-edit form input.update-btn:hover, .login form input.form-btn:hover, .signup form input.form-btn:hover {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+}
+
+.recipes .recipe-link a {
+  background-color: #fff;
+  bottom: 0;
+  color: #000;
+  display: block;
+  height: 80px;
+  left: 0;
+  line-height: 80px;
+  position: absolute;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+  width: 50%;
+}
+
+.recipes .recipe-edit a {
+  background-color: rgba(255,255,255,0.70);
+  bottom: 0;
+  color: #000;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+  width: 50%;
+}
+
+img.arrow {
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 80px;
+}
+
+/* 
+  RECIPE 
+*/
+
+.recipe-show {
+  position: relative;
+  width: 100%;
+}
+
+.recipe-show h2 {
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  display: block;
+  font-size: 22px;
+  font-weight: normal;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+  position: absolute;
+  text-align: center;
+  text-overflow: ellipsis;
+  top: 0;
+  width: calc(100% - 60px);
+  white-space: nowrap;
+}
+
+.img_container {
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.img_container img {
+  width: 100%;
+}
+
+.recipe-info {
+  background-color: #000;
+  display: block;
+  float: left;
+}
+
+.ingredients {
+  color: #fff;
+  display: block;
+  float: left;
+  padding: 30px;
+  width: calc(50% - 60px);
+}
+
+.instructions {
+  background-color: #DAD8D2;
+  display: block;
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  height: 100%;
+  line-height: 18px;
+  padding: 30px;
+  width: calc(50% - 60px);
+}
+
+.recipe-show .recipe-edit a {
+  background-color: #fff;
+  color: #000;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 520px;
+  transition: background 0.5s, color 0.5s;
+  width: 25%;
+}
+
+.recipe-show .recipe-delete a {
+  background-color: #ed145b;
+  color: #fff;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 520px;
+  transition: background 0.5s, color 0.5s;
+  width: 25%;
+}
+
+.recipe-edit form {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.recipe-edit form input, .recipe-edit form textarea, .login form input, .signup form input {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-bottom: 4px solid #000;
+  font-size: 16px;
+  margin: 10px 30px 0;
+  padding:30px;
+  transition: border-bottom 0.5s;
+  width: calc(100% - 120px);
+}
+
+.recipe-edit form textarea {
+  resize: none;
+}
+
+.recipe-edit form input:focus, .recipe-edit form textarea:focus, .login form input:focus, .signup form input:focus {
+  border:none;
+  border-bottom: 4px solid #ed145b;
+  box-shadow: 0 0;
+  transition: border-bottom 0.5s;
+  outline: none;
+}
+
+.recipe-edit form input.form-btn, .login form input.form-btn, .signup form input.form-btn {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  height: 80px;
+  line-height: 80px;
+  margin: 10px 0 0;
+  padding: 0;
+  transition: background 0.5s, color 0.5s;
+  width: 100%;
+}
+
+.login, .signup {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.login form input, .signup form input {
+  width: 280px;
+}
+
+.login form input.form-btn, .signup form input.form-btn {
+  margin-left: 30px;
+  width: 340px;
+  transition: background 0.5s, color 0.5s;
+}
+
+
+/******
+  MEDIA QUERIES
+******/
+
+@media screen and (max-width: 960px) {
+  div.cuisine, .recipe, .img_container {
+    height: 360px;
+  }
+
+  .recipe-show .recipe-edit a, .recipe-show .recipe-delete a {
+    top: 280px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  div.cuisine, .recipe, .img_container {
+    height: 260px;
+  }
+
+  .ingredients, .instructions {
+    width: calc(100% - 60px);
+  }
+
+  .recipe-show .recipe-edit a, .recipe-show .recipe-delete a {
+    top: 180px;
+    width: 50%;
+  }
+}
+
+
+
